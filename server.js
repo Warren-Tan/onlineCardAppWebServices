@@ -38,7 +38,7 @@ app.get('/allcards', async (req,res) => {
     }
 });
 
-//Example route: create a new card
+//Example route: create new card
 app.post('/addcard', async (req,res) => {
     const {card_name, card_pic} = req.body;
     try {
@@ -50,3 +50,4 @@ app.post('/addcard', async (req,res) => {
         res.status(500).json({message: 'Server error - could not add card '+card_name});
     }
 });
+
